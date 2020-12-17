@@ -79,7 +79,6 @@ server.post('/projects/:id/tasks', checkProjectExists, (req, res) => {
  * Request body: title
  * Altera o título do projeto com o id presente nos parâmetros da rota.
  */
-
 server.put('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
@@ -91,11 +90,11 @@ server.put('/projects/:id', checkProjectExists, (req, res) => {
   return res.json(projects);
 });
 
+
 /**
  * Route params: id
  * Deleta o projeto associado ao id presente nos parâmetros da rota.
  */
-
 server.delete('/projects/:id', checkProjectExists, (req, res) => {
   const { id } = req.params;
 
